@@ -10,7 +10,7 @@ const config = {
   tagline: 'Collaborative knowledge management',
   url: 'https://thinktastic.github.io/zytonomy/',
   trailingSlash: true,
-  baseUrl: '/',
+  baseUrl: '/zytonomy/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
