@@ -1,7 +1,7 @@
 # Thinktastic Zytonomy
 
-**[Zy](https://en.wiktionary.org/wiki/zy)**: Interrogative; "which"
-**[-nomy](https://en.wiktionary.org/wiki/-nomy#English)**: a system of rules, laws, or knowledge about a body of a particular field
+- **[Zy](https://en.wiktionary.org/wiki/zy)**: Interrogative; "which"
+- **[-nomy](https://en.wiktionary.org/wiki/-nomy#English)**: a system of rules, laws, or knowledge about a body of a particular field
 
 Zytonomy is an open source, team-oriented, collaborative knowledge management tool built on top of [Azure Cognitive Question Answering](https://azure.microsoft.com/en-us/services/cognitive-services/question-answering/).  In particular, it provides a team-based context and front-end web application to work with a knowledge base built on top of Azure Cognitive Question Answering.
 
@@ -26,6 +26,16 @@ Zytonomy provides a front-end and service to work with these powerful features f
 ## Project
 
 The following sections describe the architecture and structure of the project.
+
+For more detailed documentation, see the `/docs` directory.
+
+```
+cd docs
+yarn
+yarn start
+```
+
+The documentation will be available at `http://localhost:3001`.
 
 ### Architecture
 
