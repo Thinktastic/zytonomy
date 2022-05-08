@@ -8,7 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Zytonomy',
   tagline: 'Collaborative knowledge management',
-  url: 'https://thinktastic.github.io/zytonomy',
+  url: 'https://thinktastic.github.io/zytonomy/',
+  trailingSlash: true,
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
