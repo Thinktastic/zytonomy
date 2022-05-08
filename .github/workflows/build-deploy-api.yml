@@ -1,0 +1,50 @@
+# Deploys the API portion of the application to Azure.
+# See: https://github.com/marketplace/actions/azure-functions-action
+name: Build and Deploy API
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+    paths: [ api/Zytonomy.Api/** ]
+  pull_request:
+    branches: [ main ]
+    paths: [ api/Zytonomy.Api/** ]
+
+  workflow_dispatch:
+
+# CONFIGURATION
+env:
+  AZURE_FUNCTIONAPP_NAME: zyfuncappdev  # set this to your application's name
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: './api/Zytonomy.Api'    # set this to the path to your web app project, defaults to the repository root
+  DOTNET_VERSION: '6.0.x'              # set this to the dotnet version to use
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+    - name: 'Checkout GitHub Action'
+      uses: actions/checkout@master
+
+    - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: 'Resolve Project Dependencies Using Dotnet'
+      shell: bash
+      run: |
+        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
+        dotnet build --configuration Release --output ./output
+        popd
+
+    - name: 'Run Azure Functions Action'
+      uses: Azure/functions-action@v1.3.2 # https://github.com/Azure/functions-action/issues/86
+      id: fa
+      with:
+        app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
+        package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
+        publish-profile: ${{ secrets.AZURE_FUNC_PUBLISH_PROFILE }} # Obtain from Azure portal and paste into GH Secrets
+
+# For more samples to get started with GitHub Action workflows to deploy to Azure, refer to https://github.com/Azure/actions-workflow-samples

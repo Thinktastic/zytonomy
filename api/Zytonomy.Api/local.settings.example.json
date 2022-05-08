@@ -1,0 +1,27 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;QueueEndpoint=http://127.0.0.1:10001/devstoreaccount1;TableEndpoint=http://127.0.0.1:10002/devstoreaccount1;",
+    "ContentSourceStorage": "BlobEndpoint=https://zytonomysourcesdev.blob.core.windows.net/;QueueEndpoint=https://zytonomysourcesdev.queue.core.windows.net/;FileEndpoint=https://zytonomysourcesdev.file.core.windows.net/;TableEndpoint=https://zytonomysourcesdev.table.core.windows.net/;SharedAccessSignature=sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacuptfx&se=2029-07-17T02:05:14Z&st=2021-07-16T18:05:14Z&spr=https&sig=QXEpb7q6ICKwF6NTWwiVDE2KqfzrnlqFfprkTNFzhrE%3D",
+    "AzureSignalRConnectionString": "Endpoint=https://{YOURE_DOMAIN_HERE}.service.signalr.net;AccessKey={YOURE_ACCESS_KEY_HERE};Version=1.0;",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "OpenApi__ApiKey": "{YOURE_OPEN_API_KEY_HERE}",
+    "Cosmos_Endpoint": "https://{YOURE_DOMAIN_HERE}.documents.azure.com:443/",
+    "Cosmos_AuthKey": "{YOUR_COSMOS_DB_KEY_HERE}",
+    "Blob_AccountName": "{YOUR_BLOB_ACCOUNT_HERE}",
+    "Blob_AccountKey": "{YOUR_BLOB_ACCOUNT_KEY_HERE}",
+    "Kb_Id": "{YOUR_KB_ID_HERE}",
+    "QnA_ApiKey": "{YOUR_AZURE_QA_KEY_HERE}",
+    "QnA_Endpoint": "https://{YOURE_DOMAIN_HERE}.cognitiveservices.azure.com/",
+    "SendGrid_ApiKey": "{YOURE_SEND_GRID_KEY_HERE}",
+    "Env_Url": "https://localhost:8080/",
+    "Env_Suffix": "local_dev_cc"
+  },
+  "ConnectionStrings": {
+    "Zytonomy": "AccountEndpoint=https://{YOURE_DOMAIN_HERE}.documents.azure.com:443/;AccountKey={YOURE_ACCESS_KEY_HERE}"
+  },
+  "Host": {
+    "CORS": "https://localhost,https://localhost:8080,http://localhost:7071,http://localhost:3000,https://localhost:3000",
+    "CORSCredentials": true
+  }
+}

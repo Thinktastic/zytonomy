@@ -1,0 +1,11 @@
+{
+    "azureFunctions.projectSubpath": "api/Zytonomy.Api",
+    "azureFunctions.deploySubpath": "bin/Release/net6.0/publish",
+    "azureFunctions.projectLanguage": "C#",
+    "azureFunctions.projectRuntime": "~3",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.preDeployTask": "publish",
+    "dotnet-test-explorer.testProjectPath": "**/*Tests.csproj",
+    "editor.tabSize": 4,
+    "editor.formatOnType": false
+}
